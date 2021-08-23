@@ -17,7 +17,7 @@ class Creekey < Formula
 
   end
 
-  plist_options :startup => true
+  plist_options :login => true
   def caveats
     "Run 'creekey pair' to pair with your phone!"
   end
@@ -34,14 +34,13 @@ class Creekey < Formula
         <string>#{bin}/creekey</string>
         <string>agent</string>
       </array>
-      <key>RunAtLoad</key>
-      <true/>
+      <key>StandardOutPath</key>
+      <string>/opt/homebrew/var/log/homebrew/creekey.log</string>
+      <key>StandardErrorPath</key>
+      <string>/opt/homebrew/var/log/homebrew/creekey.log</string>
       <key>KeepAlive</key>
       <true/>
-      <key>StandardErrorPath</key>
-      <string>/dev/null</string>
-      <key>StandardOutPath</key>
-      <string>/dev/null</string>
+    </dict>
     </plist>
   EOS
   end
