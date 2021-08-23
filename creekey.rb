@@ -3,7 +3,7 @@ class Creekey < Formula
   homepage "https://creekey.io"
   version "0.1.0"
   license ""
-  url "https://github.com/opencreek/creekey-cli.git",:using => :git, tag: "main"
+  url "https://github.com/opencreek/creekey-cli.git",:using => :git, :branch => "main"
 
   head "https://github.com:opencreek/creekey-cli.git"
 
