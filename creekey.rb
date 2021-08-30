@@ -1,9 +1,9 @@
 class Creekey < Formula
   desc "Keep your private keys on your phone!"
   homepage "https://creekey.io"
-  version "0.1.0"
+  version "v0.1.0-beta2"
   license ""
-  url "https://github.com/opencreek/creekey-cli.git",:using => :git, :branch => "main"
+  url "https://github.com/opencreek/creekey-cli.git", tag: "v0.1.0-beta2", revision: "57b8975cc5bec6fd1297b2da2884027149170a52"
 
   head "https://github.com:opencreek/creekey-cli.git"
 
@@ -14,7 +14,6 @@ class Creekey < Formula
 
     bin.install "target/release/creekey"
     bin.install "target/release/creekey-git-sign"
-
   end
 
   plist_options :login => true
