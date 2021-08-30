@@ -4,6 +4,13 @@ class Creekey < Formula
   version "0.1.0-beta12"
   license ""
 
+  bottle do
+    root_url "https://github.com/opencreek/creekey-cli/releases/download/0.1.0-beta12"
+    rebuild 1
+    sha256 cellar: :any, big_sur: "6808a183f6489d219fb557c8a14659a50db8f4a16ee5a3e1f2b535a4e254a1a7"
+    sha256 cellar: :any, catalina: "2cbfd35c563e7645649d56fd6b15eba1cc6b72e118ed3edeb2346852f47f41c8"
+  end
+
   url "https://github.com/opencreek/creekey-cli.git", tag: "0.1.0-beta12", revision: "79fc7979960d14088f936f1dd60246e19bc68026"
 
   head "https://github.com:opencreek/creekey-cli.git"
