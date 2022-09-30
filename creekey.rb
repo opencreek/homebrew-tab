@@ -1,17 +1,10 @@
 class Creekey < Formula
   desc "Keep your private keys on your phone!"
   homepage "https://creekey.io"
-  version "0.1.1"
+  version "v0.2.0"
   license ""
 
-  bottle do
-    root_url "https://github.com/opencreek/creekey-cli/releases/download/0.1.1"
-    rebuild 1
-    sha256 cellar: :any, big_sur: "e34b688e79c6e53f14398256aa4b455709ff454c737e5ac17d20cfe954dd5326"
-    sha256 cellar: :any, catalina: "64405812c80f46ae914316d13e3ec05fee4f5f3f95b73a03d2591c624b4fa1eb"
-  end
-
-  url "https://github.com/opencreek/creekey-cli.git", tag: "0.1.1", revision: "d407506b90e2f8a0640b5d80e6b9df103c523b85"
+  url "https://github.com/opencreek/creekey-cli.git", tag: "v0.2.0", revision: "261111069d8c8d1ef401324a7cb5f98e4b8dac97"
 
   head "https://github.com:opencreek/creekey-cli.git"
 
