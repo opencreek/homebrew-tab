@@ -1,10 +1,10 @@
 class Creekey < Formula
   desc "Keep your private keys on your phone!"
   homepage "https://creekey.io"
-  version "v0.2.0"
+  version "v0.3.0"
   license ""
 
-  url "https://github.com/opencreek/creekey-cli.git", tag: "v0.2.0", revision: "261111069d8c8d1ef401324a7cb5f98e4b8dac97"
+  url "https://github.com/opencreek/creekey-cli.git", tag: "v0.3.0", revision: "325bf5f86da8aff0ea431efcfb35e3585a566756"
 
   head "https://github.com:opencreek/creekey-cli.git"
 
