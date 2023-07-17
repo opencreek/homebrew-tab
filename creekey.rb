@@ -17,32 +17,13 @@ class Creekey < Formula
     bin.install "target/release/creekey-git-sign"
   end
 
-  service.require_root :login => true
+  service do
+    run [opt_bin/"creekey", "agent"]
+    keep_alive true
+  end
+  
   def caveats
     "Run 'creekey pair' to pair with your phone!"
-  end
-
-  def plist; <<-EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-        <string>#{plist_name}</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{bin}/creekey</string>
-        <string>agent</string>
-      </array>
-      <key>StandardOutPath</key>
-      <string>/opt/homebrew/var/log/homebrew/creekey.log</string>
-      <key>StandardErrorPath</key>
-      <string>/opt/homebrew/var/log/homebrew/creekey.log</string>
-      <key>KeepAlive</key>
-      <true/>
-    </dict>
-    </plist>
-  EOS
   end
 
   test do
