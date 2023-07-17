@@ -17,7 +17,7 @@ class Creekey < Formula
     bin.install "target/release/creekey-git-sign"
   end
 
-  plist_options :login => true
+  service.require_root :login => true
   def caveats
     "Run 'creekey pair' to pair with your phone!"
   end
